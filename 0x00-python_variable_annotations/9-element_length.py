@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-'''Task 7's module.
-'''
-from typing import Union, Tuple
+""" module for element_length(lst) """
+from typing import Iterable, Sequence, List, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    '''Converts a key and its value to a tuple of the key and
-    the square of its value.
-    '''
-    return (k, float(v**2))
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """ return length of lst """
+    return [(i, len(i)) for i in lst]
